@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Liste des produits</h3>
+  <ul class="list-group">
+    <li *ngFor="let product of products" class="list-group-item">
+      {{ product.name }} - {{ product.price }}e (Quantité: {{ product.quantity }})
+      <span [class]="product.checked ? 'text-success' : 'text-danger'">
+        {{ product.checked ? 'Available' : 'Unavailable' }}
+      </span>
+    </li>
+  </ul>
+</div>
